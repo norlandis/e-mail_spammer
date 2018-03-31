@@ -1,4 +1,3 @@
-from termcolor import colored
 import smtplib
 smtpObj = smtplib.SMTP('smtp.gmail.com',587)
 smtpObj.starttls()
@@ -11,9 +10,9 @@ if smtpObj.login(gml,ps):
  i = 1
  while i <= 5:
   if smtpObj.sendmail(gml,jar,mess):
-   print(colored('message send - [ERROR]','red'))
+   print('message send - [ERROR]','red')
   else:
-   print(colored('message send - [OK]','green'))
+   print('message send - [OK]','green')
  i = i + 1
 else:
  print("no valid password")
